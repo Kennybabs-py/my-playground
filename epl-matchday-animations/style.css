@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "Grotesk";
+  src: url("/assets/SpaceGrotesk-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ginger";
+  src: url("/assets/Ginger.ttf");
+  font-display: swap;
+}
+
+:root {
+  --white: #faf2e7;
+  --beige: #f8dfc1;
+  --primary-font: "Ginger", sans-serif;
+  --secondary-font: "Grotesk", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+main.wrapper {
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--beige);
+  position: relative;
+  overflow: hidden;
+}
+
+.animation__btns {
+  width: min(90%, 400px);
+  min-height: 200px;
+  padding: 1rem;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+
+.animation__btns button {
+  display: inline-block;
+  position: relative;
+  min-width: 100px;
+  min-height: 40px;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  color: black;
+  font-weight: 600;
+  border-radius: 50px;
+  text-wrap: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, 90% #fff, 10% #000);
+}
+
+.animation__btns button::after {
+  content: "";
+  position: absolute;
+  display: inherit;
+  top: 0;
+  left: -40%;
+  width: 10px;
+  height: 100%;
+  border-radius: none;
+  background-image: linear-gradient(to bottom, #fff, #000);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transform: rotateY(35deg) skewX(20deg);
+  transition: all 300ms ease-in-out;
+}
+
+.animation__btns button:is(:hover)::after {
+  left: 100%;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Reveal Loader Animation</title>
+  </head>
+  <body>
+    <div class="overlay">
+      <main class="wrapper" id="js-wrapper">
+        <section class="container">
+          <h1 class="container__heading">
+            <div class="line__container">
+              <span id="home-paragraph" class="line__container--text">
+                a journey from ataraxia
+              </span>
+            </div>
+
+            <div class="line__container">
+              <span id="home-paragraph" class="line__container--text">
+                to self-introspection
+                <span id="inner-text" class="inner__text"
+                  >no one is left out, <br />even from deep</span
+                >
+                and
+              </span>
+            </div>
+
+            <div class="line__container">
+              <span id="home-paragraph" class="line__container--text"
+                >from a place of bliss</span
+              >
+            </div>
+          </h1>
+        </section>
+      </main>
+
+      <div class="reveal__mask" id="reveal-mask"></div>
+      <div class="reveal__mask__two" id="reveal-mask-2"></div>
+      <div class="reveal__mask__three" id="reveal-mask-3"></div>
+
+      <section class="wrapper__loader" id="js-wrapper-loader">
+        <div class="loader__mask" id="loader-mask"></div>
+        <div class="loader__mask__two" id="loader-mask-2"></div>
+        <div class="loader__mask__three" id="loader-mask-3"></div>
+
+        <div>
+          <span id="js-loader-text">reveal loader animation</span>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
+    <script src="/index.js"></script>
+  </body>
+</html>
