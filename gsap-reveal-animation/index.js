@@ -52,7 +52,6 @@ function runLoaderAnimation() {
       "#reveal-mask",
       {
         xPercent: 100,
-        duration: 0.8,
         // delay: 2,
       },
       {
