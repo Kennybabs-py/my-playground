@@ -6,7 +6,7 @@ import gridItems from "@/data.json";
 import "./home.scss";
 
 export default function Home() {
-  const [mouseX, setMouseX] = useState(0);
+  const [mouseX] = useState(0);
   const itemsRef = useRef(gridItems.map(() => createRef<HTMLDivElement>()));
   const gridContainerRef = useRef<HTMLDivElement | null>(null);
   const pageRef = useRef<HTMLElement | null>(null);
